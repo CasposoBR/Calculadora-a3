@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/blackgrounded2"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Calculadora Virtual"
+        android:textSize="45sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+
+        />
+
+    <!-- Área de cálculo e resultado -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/calculo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1+1" />
+
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/calculo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="= 2 " />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Teclado numérico -->
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_gravity="center">
+
+        <!-- Linha 1 -->
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C"
+                android:text="C"
+                style="@style/CalcButtonGrayOrange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/parentese_abrindo"
+                android:text="("
+                style="@style/CalcButtonGrayOrange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/parentese_fechando"
+                android:text=")"
+                style="@style/CalcButtonGrayOrange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/divisao"
+                android:text="/"
+                style="@style/CalcButtonGrayOrange" />
+
+        </TableRow>
+
+        <!-- Linha 2 -->
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sete"
+                android:text="7"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/oito"
+                android:text="8"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nove"
+                android:text="9"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/multiplicacao"
+                android:text="x"
+                style="@style/CalcButtonGrayOrange" />
+
+        </TableRow>
+
+        <!-- Linha 3 -->
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/quatro"
+                android:text="4"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cinco"
+                android:text="5"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seis"
+                android:text="6"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/menos"
+                android:text="-"
+                style="@style/CalcButtonGrayOrange" />
+
+        </TableRow>
+
+        <!-- Linha 4 -->
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/um"
+                android:text="1"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dois"
+                android:text="2"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tres"
+                android:text="3"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mais"
+                android:text="+"
+                style="@style/CalcButtonGrayOrange" />
+
+        </TableRow>
+
+        <!-- Linha 5 -->
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ponto"
+                android:text="."
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/zero"
+                android:text="0"
+                style="@style/CalcButtonGrayWhite" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/apagar"
+                android:drawableBottom="@drawable/c_delete_24"
+                style="@style/CalcButtonGrayOrange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/igual"
+                android:text="="
+                android:background="@color/black_orange"
+                android:textColor="@color/white"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
