@@ -5,9 +5,9 @@ Uma calculadora simples desenvolvida em Kotlin, com funcionalidades básicas com
 ## 📱 Tecnologias utilizadas
 
 - Kotlin
-- IntelliJ IDEA (ou Android Studio)
+- MVC Arquiteture
 - Lógica de programação
-- Terminal (execução via linha de comando)
+
 
 ## ⚙️ Funcionalidades
 
